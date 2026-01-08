@@ -23,7 +23,7 @@ const Header = () => {
         <motion.header
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            className="fixed top-2 sm:top-4 left-1/2 -translate-x-1/2 z-50 w-auto max-w-[calc(100%-2rem)] sm:max-w-none"
+            className="fixed top-16 sm:top-4 left-1/2 -translate-x-1/2 z-40 w-auto max-w-[calc(100%-2rem)] sm:max-w-none"
         >
             <nav
                 className={`
