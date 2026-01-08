@@ -130,18 +130,19 @@ const ProjectCard = ({ project, index }) => {
 
 const Projects = () => {
     return (
-        <section id="projects" className="py-24 px-6 relative">
+        <section id="projects" className="py-16 sm:py-24 px-4 sm:px-6 relative">
             <div className="max-w-7xl mx-auto">
                 <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    className="mb-16 text-center"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-center mb-8 sm:mb-12"
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4 font-heading text-slate-800">
-                        Featured <span className="text-slate-500">Projects</span>
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 font-heading text-slate-800">
+                        Featured <span className="text-slate-600">Projects</span>
                     </h2>
-                    <p className="text-slate-600 max-w-xl mx-auto">
-                        A showcase of my recent work in full-stack development.
+                    <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
+                        Showcasing my recent work and technical expertise
                     </p>
                 </motion.div>
 

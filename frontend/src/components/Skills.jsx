@@ -1,45 +1,51 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const skillCategories = [
-    {
-        title: 'Frontend Development',
-        desc: 'Building modern, responsive user interfaces with React, Tailwind CSS, and cutting-edge web technologies.',
-        skills: ['React.js', 'HTML/CSS', 'Tailwind', 'Framer Motion'],
-        gradientFrom: '#06B6D4',
-        gradientTo: '#3B82F6',
-    },
-    {
-        title: 'Backend Development',
-        desc: 'Creating robust server-side applications with Node.js, Express, and database management systems.',
-        skills: ['Node.js', 'Express.js', 'Django', 'JWT'],
-        gradientFrom: '#10B981',
-        gradientTo: '#059669',
-    },
-    {
-        title: 'Programming Languages',
-        desc: 'Proficient in multiple programming paradigms with strong foundations in algorithms and data structures.',
-        skills: ['Python', 'JavaScript', 'C++', 'Java'],
-        gradientFrom: '#F59E0B',
-        gradientTo: '#EF4444',
-    },
-];
+const Skills = () => {
+    const skillCategories = [
+        {
+            title: 'Frontend Development',
+            description: 'Building modern, responsive user interfaces with React, Tailwind CSS, and cutting-edge web technologies.',
+            skills: ['React.js', 'HTML/CSS', 'Tailwind', 'Framer Motion'],
+            gradientFrom: '#3b82f6',
+            gradientTo: '#06b6d4',
+        },
+        {
+            title: 'Backend Development',
+            description: 'Creating robust server-side applications with Node.js, Express, and database management systems.',
+            skills: ['Node.js', 'Express.js', 'Django', 'JWT'],
+            gradientFrom: '#10b981',
+            gradientTo: '#14b8a6',
+        },
+        {
+            title: 'Programming Languages',
+            description: 'Proficient in multiple programming paradigms with strong foundations in algorithms and data structures.',
+            skills: ['Python', 'JavaScript', 'C++', 'Java'],
+            gradientFrom: '#f59e0b',
+            gradientTo: '#ef4444',
+        },
+    ];
 
-export default function SkillCards() {
     return (
-        <section id="skills" className="py-24 px-6 relative">
+        <section id="skills" className="py-16 sm:py-24 px-4 sm:px-6 relative">
             <div className="max-w-7xl mx-auto">
-                <motion.h2
+                {/* Section Header */}
+                <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-3xl md:text-5xl font-bold mb-16 text-center font-heading text-slate-800"
+                    className="text-center mb-12 sm:mb-16"
                 >
-                    Technical <span className="text-slate-500">Arsenal</span>
-                </motion.h2>
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 font-heading text-slate-800">
+                        Technical <span className="text-slate-600">Arsenal</span>
+                    </h2>
+                    <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
+                        A comprehensive toolkit for building modern, scalable applications
+                    </p>
+                </motion.div>
 
                 <div className="flex justify-center items-center flex-wrap gap-8">
-                    {skillCategories.map(({ title, desc, skills, gradientFrom, gradientTo }, idx) => (
+                    {skillCategories.map(({ title, description, skills, gradientFrom, gradientTo }, idx) => (
                         <motion.div
                             key={idx}
                             initial={{ opacity: 0, y: 50 }}

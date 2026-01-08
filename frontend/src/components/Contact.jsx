@@ -93,7 +93,7 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="py-24 px-6 relative">
+        <section id="contact" className="py-16 sm:py-24 px-4 sm:px-6 relative">
             {/* Toast Notification */}
             <Toast message={toastMessage} type={toastType} isVisible={showToast} />
 
@@ -102,24 +102,25 @@ const Contact = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center mb-16"
+                    className="text-center mb-8 sm:mb-12"
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4 font-heading text-black">
-                        Get In <span className="text-gray-500">Touch</span>
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 font-heading text-slate-800">
+                        Get In <span className="text-slate-600">Touch</span>
                     </h2>
-                    <p className="text-gray-600 max-w-xl mx-auto">
-                        Have a project in mind or just want to chat? Feel free to reach out!
+                    <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
+                        Have a project in mind? Let's work together to bring your ideas to life.
                     </p>
                 </motion.div>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
+                <motion.form
+                    onSubmit={handleSubmit}
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.2 }}
                     className="bg-white/60 backdrop-blur-xl border border-white/40 rounded-3xl p-8 md:p-12 shadow-[0_8px_32px_rgba(0,0,0,0.06)]"
                 >
-                    <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="space-y-6">
                         {/* Name Input */}
                         <div>
                             <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">

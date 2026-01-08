@@ -23,11 +23,11 @@ const Header = () => {
         <motion.header
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-auto"
+            className="fixed top-2 sm:top-4 left-1/2 -translate-x-1/2 z-50 w-auto max-w-[calc(100%-2rem)] sm:max-w-none"
         >
             <nav
                 className={`
-          relative px-6 py-2.5 rounded-full
+          relative px-3 sm:px-6 py-2 sm:py-2.5 rounded-full
           bg-white/60 backdrop-blur-2xl
           border border-white/30
           shadow-[0_8px_32px_rgba(0,0,0,0.08),0_2px_8px_rgba(0,0,0,0.04)]
@@ -36,14 +36,14 @@ const Header = () => {
         `}
             >
                 <div className="flex items-center justify-center">
-                    <div className="flex items-center gap-1">
+                    <div className="flex items-center gap-0.5 sm:gap-1">
                         {['Home', 'Skills', 'Projects'].map((item) => (
                             <motion.button
                                 key={item}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 onClick={() => scrollToSection(item.toLowerCase())}
-                                className="px-4 py-1.5 rounded-full text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100/50 transition-all duration-200"
+                                className="px-2 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100/50 transition-all duration-200"
                             >
                                 {item}
                             </motion.button>
@@ -53,7 +53,7 @@ const Header = () => {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             href="#contact"
-                            className="ml-1 px-5 py-1.5 rounded-full bg-black text-white text-sm font-medium hover:bg-gray-800 transition-all duration-200 shadow-lg"
+                            className="ml-0.5 sm:ml-1 px-3 sm:px-5 py-1.5 rounded-full bg-black text-white text-xs sm:text-sm font-medium hover:bg-gray-800 transition-all duration-200 shadow-lg"
                         >
                             Contact
                         </motion.a>

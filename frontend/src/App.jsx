@@ -25,12 +25,12 @@ function App() {
       {/* Fixed Logo in Top-Left */}
       <button
         onClick={scrollToHome}
-        className="fixed top-6 left-6 z-50 cursor-pointer hover:scale-105 transition-transform duration-300"
+        className="fixed top-4 left-4 sm:top-6 sm:left-6 z-50 cursor-pointer hover:scale-105 transition-transform duration-300"
       >
         <img
           src="/logo.png"
           alt="Logo"
-          className="h-20 w-auto drop-shadow-lg"
+          className="h-12 sm:h-16 md:h-20 w-auto drop-shadow-lg"
         />
       </button>
 
