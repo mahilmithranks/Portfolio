@@ -222,9 +222,9 @@ const Contact = () => {
                                     Send Message
                                 </>
                             )}
-                        </button>
-                    </form>
-                </motion.div>
+                        </motion.button>
+                    </div>
+                </motion.form>
             </div>
         </section>
     );
