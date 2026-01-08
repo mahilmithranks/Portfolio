@@ -189,10 +189,12 @@ const Contact = () => {
                         )}
 
                         {/* Submit Button */}
-                        <button
+                        <motion.button
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
                             type="submit"
                             disabled={status === 'sending'}
-                            className="w-full py-4 px-6 rounded-2xl bg-black text-white font-medium hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black/20 transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
+                            className="w-full px-6 py-3 sm:py-4 rounded-xl bg-black text-white font-medium hover:bg-gray-800 transition-all duration-200 shadow-lg flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base"
                         >
                             {status === 'sending' ? (
                                 <>
