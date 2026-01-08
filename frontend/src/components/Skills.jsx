@@ -77,7 +77,7 @@ const Skills = () => {
                             {/* Content - iOS Glassmorphism */}
                             <div className="relative z-20 left-0 p-8 bg-white/60 backdrop-blur-2xl border border-white/40 shadow-[0_8px_32px_rgba(0,0,0,0.08)] rounded-3xl text-slate-800 transition-all duration-500 group-hover:left-[-25px] group-hover:p-10 group-hover:bg-white/70 h-full flex flex-col">
                                 <h2 className="text-2xl font-bold mb-3 font-heading">{title}</h2>
-                                <p className="text-sm leading-relaxed mb-4 text-slate-600 flex-grow">{desc}</p>
+                                <p className="text-sm leading-relaxed mb-4 text-slate-600 flex-grow">{description}</p>
 
                                 {/* Skills Tags */}
                                 <div className="flex flex-wrap gap-2 mb-4">
